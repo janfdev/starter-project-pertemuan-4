@@ -1,46 +1,53 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
-  --primary-color: #4635b1;
-  --second-color: #b771e5;
-  --third-color: #aeea94;
-  --fourth-color: #fffbca;
+  --primary-color: #4635b1; /* Judul, nama */
+  --second-color: #b771e5; /* Tombol & hover */
+  --third-color: #aeea94; /* CTA / Aksi kuat */
+  --fourth-color: #fffbca; /* Footer / background soft */
+}
+
+body {
+  background-color: #f8f8ff;
+  color: #333;
 }
 
 .container {
-  padding: 40px;
-  overflow-x: hidden;
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .logo img {
-  width: 35px;
+  width: 40px;
 }
 
 .logo h1 {
   color: var(--primary-color);
+  font-size: 24px;
 }
 
 nav ul {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 nav ul li {
@@ -48,73 +55,96 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 18px;
   text-decoration: none;
-  color: black;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--second-color);
 }
 
 .btn-contact {
-  border: none;
-  padding: 10px 15px;
-  font-size: 18px;
   background-color: var(--second-color);
-  border-radius: 10px;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-contact:hover {
+  background-color: var(--primary-color);
 }
 
 main {
-  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-main .content {
-  max-width: 700px;
+.content {
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-main .content h1 {
-  font-size: 40px;
+.content h1 {
+  font-size: 48px;
+  font-weight: bold;
 }
 
-main .content .name {
+.content .name {
   color: var(--primary-color);
-  font-weight: 800;
 }
 
-main .content p {
-  font-size: 15px;
+.content h3 {
+  font-size: 24px;
+  color: var(--second-color);
 }
 
-main .content .btn-hire {
-  border: none;
-  padding: 15px;
-  width: 300px;
-  font-size: 18px;
-  border-radius: 12px;
-  color: white;
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.btn-hire {
   background-color: var(--third-color);
+  color: #222;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-main .image img {
-  width: 700px;
+.btn-hire:hover {
+  background-color: #92d577;
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-  display: flex;
-  position: absolute;
-  width: 100%;
+  margin-top: 60px;
+  text-align: center;
   padding: 20px;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
   background-color: var(--fourth-color);
+  border-radius: 12px;
 }
 
 footer p {
-  font-size: 20px;
+  font-size: 16px;
+  color: #444;
 }
